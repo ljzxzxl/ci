@@ -11,8 +11,9 @@
 		"source": "https://github.com/bcit-ci/CodeIgniter"
 	},
 	"require": {
-		"php": ">=5.3.7",
-		"symfony/var-dumper": "^3.4"
+		"php": ">=5.4",
+		"symfony/var-dumper": "^3.4",
+		"philo/laravel-blade": "3.*"
 	},
 	"autoload": {
 		"files": [

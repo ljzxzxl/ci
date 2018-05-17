@@ -20,6 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		return view('welcome_message', array('elapsed_time'=>$this->benchmark->elapsed_time('total_execution_time_start', 'total_execution_time_end')));
 	}
 }

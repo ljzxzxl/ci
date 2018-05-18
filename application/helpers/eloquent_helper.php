@@ -2,7 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 use Illuminate\Database\Capsule\Manager as Capsule;
 // require the ci database config
-require_once APPPATH.'config/database.php';
+if(file_exists(APPPATH.'config/'.ENVIRONMENT.'/database.php')){
+    require_once APPPATH.'config/'.ENVIRONMENT.'/database.php';
+}elseif(file_exists(APPPATH.'config/database.php')){
+    require_once APPPATH.'config/database.php';
+}
 // Eloquent ORM
 $capsule = new Capsule;
 $capsule->addConnection(
